@@ -1,0 +1,20 @@
+[package]
+name = "mandelbrot"
+version = "0.1.0"
+authors = ["ritchie46 <ritchie46@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num = "0.2.1"
+image = "0.23.0"
+crossbeam = "0.7.3"
+
+[lib]
+name = "mandelbrot"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mandelbrot-cli"
+path = "src/main.rs"
