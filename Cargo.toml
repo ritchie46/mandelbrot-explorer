@@ -10,11 +10,23 @@ edition = "2018"
 num = "0.2.1"
 image = "0.23.0"
 crossbeam = "0.7.3"
+wasm-bindgen = "0.2"
+# tiny allocator to reduce wasm size
+wee_alloc = { version = "0.4" }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
 
 [lib]
 name = "mandelbrot"
 path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
 
 [[bin]]
 name = "mandelbrot-cli"
 path = "src/main.rs"
+
+
+[profile.release]
+# optimize for small code size
+opt-level = "s"
