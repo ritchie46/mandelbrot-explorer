@@ -55,7 +55,7 @@ fn pixel_to_point(
     }
 }
 
-fn render(
+pub fn render(
     pixels: &mut [u8],
     bounds: (usize, usize),
     upper_left: Complex<f64>,

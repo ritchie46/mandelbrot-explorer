@@ -13,6 +13,8 @@ crossbeam = "0.7.3"
 wasm-bindgen = "0.2"
 # tiny allocator to reduce wasm size
 wee_alloc = { version = "0.4" }
+console_error_panic_hook = "0.1.6"
+
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3"
